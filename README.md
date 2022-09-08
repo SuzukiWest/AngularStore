@@ -1,3 +1,6 @@
-# angular-n55gnc
+# Angular Web Store
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-n55gnc)
+In order to explore Angular I have built a website where I will implement some features included with:
+
+1. Angular
+2. PrimeNg
