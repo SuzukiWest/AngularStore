@@ -1,8 +1,8 @@
 <h2>Product Details</h2>
-
+<!-- If producst exists then create details - Change? -->
 <div *ngIf="product">
   <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
   <button type="button" (click)="addToCart(product)">Buy</button>
+  <h4>{{ product.price | currency }}</h4>
 </div>

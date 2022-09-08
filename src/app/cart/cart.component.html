@@ -1,15 +1,16 @@
 <h2>Cart</h2>
 
-<p>
-  <a routerLink="/shipping">Shipping Prices</a>
-</p>
-
 <!-- How to add multiple?
   *ngIf="items.length > 0" -->
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
 </div>
+
+<!-- TODO:Choose and add price to total -->
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
 
 <!-- ngSubmit?
  -->
