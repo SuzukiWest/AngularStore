@@ -12,8 +12,15 @@ import { CartComponent } from './cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 
+/*PrimeNG imports*/
+import { AccordionModule } from 'primeng/accordion';
+import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
+
 @NgModule({
-  imports: [
+    imports: [
+        AccordionModule,
+        CalendarModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,

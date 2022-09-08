@@ -15,7 +15,8 @@ export class CartComponent {
   //Will default form fields to vals here
   checkoutForm = this.formBuilder.group({
     name: '',
-    address: '',
+      address: '',
+    dateBirth:'',
   });
 
   constructor(

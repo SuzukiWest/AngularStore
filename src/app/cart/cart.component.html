@@ -3,7 +3,10 @@
 <h2>Cart</h2>
 
 <!-- How to add multiple?
-  *ngIf="items.length > 0" -->
+  *ngIf="items.length > 0"
+    
+    Display if cart is empty
+    -->
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
   <span>{{ item.price | currency }}</span>
@@ -14,19 +17,36 @@
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
-<!-- ngSubmit?
+<!-- ngSubmit - form function used w/angular?
  -->
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name"> Name </label>
-    <!-- formControlName = link to form in ts -->
-    <input id="name" type="text" formControlName="name" />
-  </div>
+    <div>
+        <label for="name"> Name </label>
+        <!-- formControlName = link to form in ts -->
+        <input id="name" type="text" formControlName="name" />
+    </div>
 
-  <div>
-    <label for="address"> Address </label>
-    <input id="address" type="text" formControlName="address" />
-  </div>
+    <div>
+        <label for="address"> Address </label>
+        <input id="address" type="text" formControlName="address" />
+    </div>
+    <!-- ?How to connect cal to form input
+        //Just formatting
+        <div class="field col-12 md:col-4">
 
-  <button class="button" type="submit">Purchase</button>
+        //for in label to title
+            <label for="basic">Basic</label>
+        //inputId=label for? connect using ngModel
+        //[showIcon]="true" attr for icon display? inputId="icon"
+            <p-calendar inputId="basic" [(ngModel)]="date1"></p-calendar>
+        </div>
+
+        <p-calendar [(ngModel)]="dateBirth" dateFormat="dd.mm.yy"></p-calendar>-->
+<!--
+    <div class="p-field p-col-12 p-md-4">
+        <label for="icon">Icon</label>
+        <p-calendar [(ngModel)]="birthDate" [showIcon]="true" inputId="icon"></p-calendar>
+    </div>-->
+
+    <button pButton class="p-button-lg" type="submit" label="Purchase" icon="pi pi-check" ></button>
 </form>

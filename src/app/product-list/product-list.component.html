@@ -1,7 +1,11 @@
 <h2>Products</h2>
 <!-- Include quick buy option on this page -->
 
+<!--How to place ngFor in accordion/other primeNG struct-->
 <!-- Loop through products -->
+
+
+
 <div *ngFor="let product of products">
   <h3>
     <a
@@ -14,8 +18,9 @@
 
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
-  <!-- Binding using () -->
-  <button type="button" (click)="share()">Share</button>
+  <!-- Binding using ()
+      ?Place prime button in accordion - pButton attr add-->
+  <button type="button" pButton (click)="share()">Share</button>
 </div>
 
 <!-- 
